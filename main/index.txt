@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TUT22 Dev Team公式サイト</title>
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300&display=swap" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+  <link href="./css/style.css" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <link rel="icon" type="image/png" href="TUT_Dev_icon.jpg">
+  <script type="text/javascript" src="js/jquery-3.6.0.min.js"></script>
+  <script type="text/javascript" src="js/jquery.mb.YTPlayer.min.js"></script>
+  <script type="text/javascript" src="js/app.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+  <script type="text/javascript" src="js/jquery-ui.min.js"></script>
+  <link rel="stylesheet" href="css/jquery-ui.css">
+</head>
+
+<body>
+  <header class="site-header sticky-top py-1">
+    <nav class="navbar navbar-dark navbar-expand-lg container d-flex flex-column flex-md-row justify-content-between">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">TUT22 Dev Team</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#responsiveMenu"
+          aria-controls="responsiveMenu" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-end" id="responsiveMenu">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item"><a href="#overview" class="nav-link">Overview</a></li>
+            <li class="nav-item"><a href="#members" class="nav-link">Members</a></li>
+            <li class="nav-item"><a href="#works" class="nav-link">Works</a></li>
+            <li class="nav-item"><a href="#contacts" class="nav-link">Contacts</a></li>
+          </ul>
+        </div>
+
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <div class="position-relative overflow-hidden text-center">
+      <div class="mx-auto mb-5">
+        <div class="video-container">
+          <div class="video-text">
+            <h1 class="display-4 fw-normal mb-4">社会課題解決に向けて</h1>
+            <p class="lead text-muted fw-normal">Always thinking about the future of the society.</p>
+          </div>
+          <div id="videoPlay" data-property="{
+              videoURL: 'tg8_TD6qFzE',
+              containment: '.video-container',
+              mute: true,
+              loop: true,
+              autoPlay: true,
+              showControls: false,
+              showYTLogo: false
+            }">
+          </div>
+        </div>
+        <div class="info-box">
+          <div class="news">
+            <div class="container">
+              <div class="row">
+                <div class="col-md-12 top-news">
+                  <span class="news-info">重要なお知らせ</span>
+                  <p class="info-title"></p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="col-ms-12">
+        <div class="text introduct" id="overview">
+          <h2 class="title fw-normal mb-4">チーム紹介</h2>
+          <p class="lead fw-normal">
+            学校法人 片柳学園 東京工科大学に所属する 1 年生 14 名による開発チームです。<br>
+            2022 年 04 月 06 日設立。<br>
+            「欲しい物がまだないなら、作ればいいじゃない」<br>
+            をモットーに日々の生活に便利そうなものやメンバーが作りたいものを制作しています。<br>
+          </p>
+        </div>
+
+        <div class="text" id="members">
+          <h2 class="title fw-normal mb-4">メンバー紹介</h2>
+          <div id="dl" style="display:none;">
+            <p></p>
+          </div>
+          <div class="row" id="app">
+            <member-icon v-for="item in products" v-bind="item" v-bind:id="item.id" v-bind:src="item.src">
+            </member-icon>
+          </div>
+        </div>
+
+        <div class="text" id="works">
+          <h2 class="title fw-normal mb-4">これまでの制作物</h2>
+          <div class="row">
+            <div class="col-lg-3">
+              <div class="card-header">
+                単位計算一発君
+              </div>
+              <div class="card-body">
+                取得予定単位を算出する拡張機能
+              </div>
+              <div class="card-footer">
+                諸事情により開発凍結
+              </div>
+            </div>
+            <div class="col-lg-3">
+              <div class="card-header">
+                fastbus(仮)
+              </div>
+              <div class="card-body">
+                バスの乗車時間を集計し表示するWEBアプリ
+              </div>
+              <div class="card-footer">
+                開発進行中
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="text" id="contacts">
+          <a class="twitter-timeline" data-width="500" data-height="500"
+            href="https://twitter.com/TUT22Dev?ref_src=twsrc%5Etfw">Tweets by TUT22Dev</a>
+          <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+          <br><a href="https://forms.gle/gAo3LNa2THgT3ave7" class="btn btn-link">不具合等の報告はこちら</a>
+          <br><a href="https://forms.gle/jXcjzNVeaW6W6mAA9" class="btn btn-link">入会希望の方はこちら</a>
+        </div>
+
+      </div>
+    </div>
+  </main>
+
+  <footer class="container py-5">
+    <div class="col-12 col-md">
+      TUT22 Dev Team
+      <small class="d-block mb-3 text-muted">© 2022</small>
+    </div>
+  </footer>
+  <script type="text/javascript" src="js/rendaring.js"></script>
+</body>
+
+</html>

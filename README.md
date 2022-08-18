@@ -1,6 +1,7 @@
 # KeyboardInputSimulation
 <h1>やっつけキーボード入力シミュレータ</h1>
 <ul>
+  <li>Windows限定</li>
   <li>入力速度と読み出しファイル名はソースコードからのみ変更可能</li>
   <li>改行はEnterを模倣してるので補完を切らないと死ぬ</li>
   <li>インデントも切らないと死ぬ</li>

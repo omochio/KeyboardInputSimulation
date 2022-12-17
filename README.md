@@ -1,4 +1,4 @@
-# KeyboardInputSimulation
+# KeyboardInputSimulator
 <h1>やっつけキーボード入力シミュレータ</h1>
 <ul>
   <li>Windows限定</li>
